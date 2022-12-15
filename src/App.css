@@ -1,0 +1,55 @@
+body {
+  background-color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  color: steelblue;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.container {
+  background-color: white;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: white;
+  width: 28%;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #888;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+@media screen and (max-width: 760px) {
+  .box {
+    width: 35%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
