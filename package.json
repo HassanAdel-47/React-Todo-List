@@ -1,6 +1,6 @@
 {
-  "homepage": "https://hassanadel-47.github.io/Fake-API-Store/",
-  "name": "crud-with-redux",
+  "homepage": "https://hassanadel-47.github.io/React-Todo-List/",
+  "name": "todo-list",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
