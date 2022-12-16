@@ -1,13 +1,119 @@
-body {
+/* Start Body styling */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
+input,
+div,
+span {
+  border-radius: 10px;
+}
+/* End Body styling */
+
+/* Start App Styling */
+.text-center {
+  text-align: center;
+  color: #4682b4;
+  margin-bottom: 10px;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  margin: 2% auto;
+}
+/* End App Styling */
+/* Start BGD Photo */
+.photo {
+  position: absolute;
+  display: flex;
+  top: 150px;
+  width: 100%;
+  height: 400px;
+  background-image: url("../images/image.svg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: -1;
+}
+/* Start TodoItems Styling */
+
+.listItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  color: #46539d;
+}
+
+.listContainer {
+  display: flex;
+}
+
+.listItems p {
+  margin: 0;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.listItems span {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+  border: 0.3px solid #ccc;
+}
+
+.listItems span.title {
+  background-color: #4682b4;
+  color: #fff;
+}
+
+.listItems span.name,
+form input[input="text"] {
+  width: 40%;
+}
+
+.listItems span.age,
+form input[input="number"] {
+  width: 40%;
+}
+
+.listItems span.action,
+form input[input="submit"] {
+  width: 20%;
+}
+
+.listItems span.icon {
+  color: #4682b4;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+}
+
+form input {
+  width: 50%;
+  padding: 10px;
+  background: #ebebeb;
+  border: transparent;
+  border: 0.3px solid #ccc;
+}
+
+form input[type="submit"] {
+  background: #4682b4;
+  border: 0.3 solid #4682b4;
+  color: #fff;
+  cursor: pointer;
+}
+/* Start TodoItems Styling */

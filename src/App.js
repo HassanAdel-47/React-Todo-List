@@ -1,39 +1,33 @@
 import "./App.css";
 import "animate.css";
-import React, { useState, useEffect } from "react";
+import React, { Component } from "react";
+import TodoItems from "./Component/TodoItems/TodoItems";
+import AddItems from "./Component/AddItem/AddItems";
 
-const App = () => {
-  // https://fakestoreapi.com/products
-  const [fake, setFake] = useState([]);
-  console.log(fake);
-  useEffect(() => {
-    fakeStore();
-  }, []);
-  const fakeStore = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
-    console.log(response);
-    const jsonData = await response.json();
-    console.log(jsonData);
-    setFake(jsonData);
+class App extends Component {
+  state = {
+    items: [],
   };
-  return (
-    <>
-      <h2>Fake React API Store</h2>
-      <div className="container">
-        {fake.map((values) => {
-          return (
-            <div className="box animate__animated animate__fadeIn">
-              <div className="content ">
-                <h3>{values.title}</h3>
-                <p>{values.description}</p>
-              </div>
-              <img loading="lazy" src={values.image} />
-            </div>
-          );
-        })}
+  deleteItem = (id) => {
+    let myItems = this.state.items.filter((item) => {
+      return item.id !== id;
+    });
+    this.setState({ items: myItems });
+  };
+  addItem = (item) => {
+    let items = this.state.items;
+    items.push(item);
+    this.setState({ items });
+  };
+  render() {
+    return (
+      <div className="App container">
+        <div className="photo animate__animated animate__fadeInLeft"></div>
+        <TodoItems items={this.state.items} deleteItem={this.deleteItem} />
+        <AddItems addItem={this.addItem} />
       </div>
-    </>
-  );
-};
+    );
+  }
+}
 
 export default App;
