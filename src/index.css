@@ -78,12 +78,12 @@ span {
   color: #fff;
 }
 
-.listItems span.name,
+.listItems span.task,
 form input[input="text"] {
   width: 40%;
 }
 
-.listItems span.age,
+.listItems span.num,
 form input[input="number"] {
   width: 40%;
 }

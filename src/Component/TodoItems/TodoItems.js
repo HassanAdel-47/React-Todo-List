@@ -6,8 +6,8 @@ const TodoItems = (props) => {
   const listItems = length ? (
     items.map((item) => (
       <div className="listContainer" key={item.id}>
-        <span className="name">{item.name}</span>{" "}
-        <span className="age">{item.age}</span>{" "}
+        <span className="task">{item.task}</span>{" "}
+        <span className="num">{item.num}</span>{" "}
         <span className="action icon" onClick={() => deleteItem(item.id)}>
           &times;
         </span>
@@ -21,8 +21,8 @@ const TodoItems = (props) => {
     <div className="listItems">
       <div>
         <h1 className="text-center">React Todo List</h1>
-        <span className="name title">Name</span>
-        <span className="age titile">Age</span>
+        <span className="task title">Task</span>
+        <span className="num titile">Num</span>
         <span className="action title">Del</span>
       </div>
       {listItems}

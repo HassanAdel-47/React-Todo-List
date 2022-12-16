@@ -4,8 +4,8 @@ var myId = Math.random();
 export default class AddItems extends Component {
   state = {
     id: myId,
-    name: "",
-    age: "",
+    task: "",
+    num: "",
   };
 
   handleChange = (e) => {
@@ -14,10 +14,12 @@ export default class AddItems extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.addItem(this.state);
+    this.state.num && this.state.task
+      ? this.props.addItem(this.state)
+      : console.log("Enter Values");
     this.setState({ id: myId });
-    this.setState({ name: "" });
-    this.setState({ age: "" });
+    this.setState({ task: "" });
+    this.setState({ num: "" });
   };
   render() {
     myId = Math.random();
@@ -26,17 +28,17 @@ export default class AddItems extends Component {
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
-            placeholder="Enter name..."
-            id="name"
+            placeholder="Enter task..."
+            id="task"
             onChange={this.handleChange}
-            value={this.state.name}
+            value={this.state.task}
           />
           <input
             type="number"
-            placeholder="Enter age..."
-            id="age"
+            placeholder="Enter num..."
+            id="num"
             onChange={this.handleChange}
-            value={this.state.age}
+            value={this.state.num}
           />
           <input type="submit" value="Add" />
         </form>
